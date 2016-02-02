@@ -175,37 +175,7 @@ Now that the model is fitted we can use the test set to estimate the accurary of
 
 `confusionMatrix(preds,mytest$classe)`
 
-`Confusion Matrix and Statistics
 
-          Reference
-Prediction    A    B    C    D    E
-         A 2232    7    0    3    0
-         B    0 1508   17    0    0
-         C    0    3 1346   27    2
-         D    0    0    5 1253    2
-         E    0    0    0    3 1438
-
-Overall Statistics
-                                          
-               Accuracy : 0.9912          
-                 95% CI : (0.9889, 0.9932)
-    No Information Rate : 0.2845          
-    P-Value [Acc > NIR] : < 2.2e-16       
-                                          
-                  Kappa : 0.9889          
- Mcnemar's Test P-Value : NA              
-
-Statistics by Class:
-
-                     Class: A Class: B Class: C Class: D Class: E
-Sensitivity            1.0000   0.9934   0.9839   0.9743   0.9972
-Specificity            0.9982   0.9973   0.9951   0.9989   0.9995
-Pos Pred Value         0.9955   0.9889   0.9768   0.9944   0.9979
-Neg Pred Value         1.0000   0.9984   0.9966   0.9950   0.9994
-Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
-Detection Rate         0.2845   0.1922   0.1716   0.1597   0.1833
-Detection Prevalence   0.2858   0.1944   0.1756   0.1606   0.1837
-Balanced Accuracy      0.9991   0.9954   0.9895   0.9866   0.9984`
 
 
 
