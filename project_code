@@ -1,0 +1,23 @@
+Final Project 
+
+
+# load packages 
+
+
+library(caret)
+library(ggplot2)
+library(rattle)
+library(rpart)
+library(randomForest)
+
+## load data 
+
+pml<-read.csv("pml-training.csv", header=T , sep=",") ##load data 
+
+pml_clean<-pml[,-c(1,2,3,4,5,6)] ## clean first column id, time stamps 
+
+CREATE TRAIN AND TEST SAMPLE FROM DATA : 
+
+intrain<-createDataPartition(pml_clean$classe, p=0.6, list=F) ## create a train//test in full set 60%//40% 
+train_pml<-pml_clean[intrain,] #train
+test_pml<-pml_clean[-intrain,] # test //validation before prediction on 20 case for exam 
