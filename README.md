@@ -155,4 +155,6 @@ At this point, we need to remove the irrelevant columns in  the train and testin
 
 ###FIT MODEL -- RANDOM FOREST 
 
+Using random forest algorithm to predict classe (best accuracy compared to tree). 
+
 `fit_forest<-train(classe ~ . , data = mytrain, method="rf") ## fit a random forest `
