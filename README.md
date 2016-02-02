@@ -11,7 +11,7 @@ library(randomForest)`
 
 ###LOAD DATA
 
-The Data are the one provided by coursera (link). One large test sample and one very smal test sample to predict when the model is completed.  
+The Data are the one provided by coursera (link). One large test sample and one very small test sample to predict when the model is completed.  
 
 `pml<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", header = T , sep= ",") ##load data train 
 test<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", header=T , sep=",") ## load 20 cases test data `
@@ -158,3 +158,13 @@ At this point, we need to remove the irrelevant columns in  the train and testin
 Using random forest algorithm to predict classe (best accuracy compared to tree). 
 
 `fit_forest<-train(classe ~ . , data = mytrain, method="rf") ## fit a random forest `
+
+### PREDICTION AND ACCURACY 
+Now that the model is fitted we can use the test set to estimate the accurary of the model 
+
+`preds<-predict(fit_forest$finalModel,newdata= mytest)`
+`confusionMatrix(preds,mytest$classe)`
+
+
+
+
