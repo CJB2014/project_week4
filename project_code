@@ -155,6 +155,10 @@ mytest<-test_pml[,c('roll_belt'
                       )]                      
 
 
+FIT MODEL -- RANDOM FOREST 
+
+fit_forest<-train(classe ~ . , data = mytrain, method="rf") ## fit a random forest 
+
 
 
 
