@@ -178,9 +178,9 @@ Now that the model is fitted we can use the test set to estimate the accurary of
 `Overall Statistics`
                                           
               ` Accuracy : 0.9912          
-              `   95% CI : (0.9889, 0.9932)`
-   ` No Information Rate : 0.2845  `        
-   ` P-Value [Acc > NIR] : < 2.2e-16`       
+                 95% CI : (0.9889, 0.9932)
+   No Information Rate : 0.2845          
+    P-Value [Acc > NIR] : < 2.2e-16`       
                                           
                 `  Kappa : 0.9889   `       
  `Mcnemar's Test P-Value : NA `
