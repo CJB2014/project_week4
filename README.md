@@ -97,19 +97,9 @@ test_pml<-pml_clean2[-intrain,] # test //validation before prediction on 20 case
                       ,'magnet_forearm_x'
                       ,'magnet_forearm_y'
                       ,'magnet_forearm_z'
-                      ,'classe'
-
-                      )]
+                      ,'classe')]`
                       
-mytest<-test_pml[,c('roll_belt'
-                      ,'pitch_belt'
-                      ,'yaw_belt'
-                      ,'total_accel_belt'
-                      ,'gyros_belt_x'
-                      ,'gyros_belt_y'
-                      ,'gyros_belt_z'
-                      ,'accel_belt_x'
-                      ,'accel_belt_y'
+`mytest<-test_pml[,c('roll_belt' ,'pitch_belt' ,'yaw_belt' ,'total_accel_belt' ,'gyros_belt_x'  ,'gyros_belt_y','gyros_belt_z' ,'accel_belt_x' ,'accel_belt_y'
                       ,'accel_belt_z'
                       ,'magnet_belt_x'
                       ,'magnet_belt_y'
@@ -153,9 +143,7 @@ mytest<-test_pml[,c('roll_belt'
                       ,'magnet_forearm_x'
                       ,'magnet_forearm_y'
                       ,'magnet_forearm_z'
-                      ,'classe'
-
-                      )]       `               
+                      ,'classe' )]  `              
 
 
 ##FIT MODEL -- RANDOM FOREST 
