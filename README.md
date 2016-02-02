@@ -29,18 +29,24 @@ First,  let's remove the not so relevant columns : time stamps, ids and names
 Secondly, we need to get rid of the variable wiht too many NAs. Here's hte threshold is 10,000 per column (around 50%)  
 
 `na<-is.na(pml_clean) ## count na 
+
 col_na<-colSums(na) ##  count na for each columns
+
 col_remove<-which(Col_na>10000)
+
 pml_clean2<-pml_clean[,-col_remove]`
 
 ###CREATE TRAIN AND TEST SAMPLE FROM DATA  
 
 The idea is to be able to train and test the model before predicting the 20 cases. 
 
-`set.seed(25930) ## can be reproduce 
-intrain<-createDataPartition(pml_clean2$classe, p=0.6, list=F) ## create a train//test in full set 60%//40% 
-train_pml<-pml_clean2[intrain,] #train
-test_pml<-pml_clean2[-intrain,] # test //validation before prediction on 20 case for exam `
+`set.seed(25930) ## can be reproduce `
+
+`intrain<-createDataPartition(pml_clean2$classe, p=0.6, list=F) ## create a train//test in full set 60%//40% `
+
+`train_pml<-pml_clean2[intrain,] #train`
+
+`test_pml<-pml_clean2[-intrain,] # test //validation before prediction on 20 case for exam `
 
 ###CHOOSE PREDICTOR 
 Let's remove the predictor with near zero variance (very little variance will not help a lot in  classification)
@@ -163,6 +169,8 @@ Using random forest algorithm to predict classe (best accuracy compared to tree)
 Now that the model is fitted we can use the test set to estimate the accurary of the model 
 
 `preds<-predict(fit_forest$finalModel,newdata= mytest)`
+
+
 `confusionMatrix(preds,mytest$classe)`
 
 
