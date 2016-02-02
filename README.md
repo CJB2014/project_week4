@@ -13,8 +13,10 @@ library(randomForest)`
 
 The Data are the one provided by coursera (link). One large test sample and one very small test sample to predict when the model is completed.  
 
-`pml<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", header = T , sep= ",") ##load data train 
-test<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", header=T , sep=",") ## load 20 cases test data `
+`pml<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv", header = T , sep= ",") ##load data train `
+
+
+`test<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv", header=T , sep=",") ## load 20 cases test data` 
 
 ###CLEAN DATA 
 
@@ -28,13 +30,13 @@ First,  let's remove the not so relevant columns : time stamps, ids and names
 
 Secondly, we need to get rid of the variable wiht too many NAs. Here's hte threshold is 10,000 per column (around 50%)  
 
-`na<-is.na(pml_clean) ## count na 
+`na<-is.na(pml_clean) ## count na `
 
-col_na<-colSums(na) ##  count na for each columns
+`col_na<-colSums(na) ##  count na for each columns`
 
-col_remove<-which(Col_na>10000)
+`col_remove<-which(Col_na>10000)`
 
-pml_clean2<-pml_clean[,-col_remove]`
+`pml_clean2<-pml_clean[,-col_remove]`
 
 ###CREATE TRAIN AND TEST SAMPLE FROM DATA  
 
