@@ -175,7 +175,12 @@ Now that the model is fitted we can use the test set to estimate the accurary of
 
 `confusionMatrix(preds,mytest$classe)`
 
+The accuracy is : 
 
+` Accuracy : 0.9912 `         
+ `95% CI : (0.9889, 0.9932)`
+ 
+ 
  
 
 
