@@ -165,7 +165,7 @@ At this point, we need to remove the irrelevant columns in  the train and testin
 
 Using random forest algorithm to predict classe (best accuracy compared to tree). 
 
-`fit_forest<-train(classe ~ . , data = mytrain, method="rf") ## fit a random forest `
+`fit_forest<-train(classe ~ . , data = mytrain, method="rf" , trControl=trainControl(method="cv", number=5)) ## fit a random forest `
 
 ### PREDICTION AND ACCURACY 
 Now that the model is fitted we can use the test set to estimate the accurary of the model 
