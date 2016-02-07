@@ -193,7 +193,7 @@ library(randomForest)</code></p>
 
 <p>Using random forest algorithm to predict classe (best accuracy compared to tree). </p>
 
-<p><code>fit_forest&lt;-train(classe ~ . , data = mytrain, method="rf") ## fit a random forest</code></p>
+<p><code>fit_forest&lt;-train(classe ~ . , data = mytrain, method="rf" , trControl=trainControl(method="cv",number=5)) ## fit a random forest</code></p>
 
 <h3>
 <a id="prediction-and-accuracy" class="anchor" href="#prediction-and-accuracy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PREDICTION AND ACCURACY</h3>
